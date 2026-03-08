@@ -16,10 +16,10 @@ public class Loja {
         this.jogos = jogos;
     }
 
-    public int recebeUsuario(Usuario usuario){
+    public int numeroAvaliados(Usuario usuario){
         int contador = 0;
         for (Jogo jogo : jogos) {
-            if (jogo.verificaChave(usuario.getApelido())) {
+            if (jogo.avaliado(usuario.getApelido())) {
                 contador+=1;
             }
         }

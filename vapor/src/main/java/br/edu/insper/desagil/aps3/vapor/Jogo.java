@@ -22,20 +22,23 @@ public class Jogo {
         avaliacoes = new HashMap<>();
     }
 
-    public void adicionaAvaliacao(String apelido, int avaliacao){
+    public void avalia(String apelido, int avaliacao){
         avaliacoes.put(apelido, avaliacao);
     }
 
-    public boolean verificaChave(String apelido){
+    public boolean avaliado(String apelido){
         return avaliacoes.containsKey(apelido);
     }
 
-    public int mediaAvaliacoes(){
+    public double media(){
+        if (avaliacoes.isEmpty()) {
+            return 0;
+        }
         int soma = 0;
         for(int i : avaliacoes.values()){
             soma += i;
         }
-        return soma/avaliacoes.size();
+        return (double) soma/avaliacoes.size();
     }
 }
 

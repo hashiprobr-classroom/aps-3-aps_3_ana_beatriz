@@ -7,10 +7,10 @@ public class Comunidade {
     private List<Usuario> membros = new ArrayList<>();
 
     public Comunidade(List<Usuario> membros){
-        this.membros = membros;
+        this.membros = new ArrayList<>(membros);
     }
 
-    public void adicionaUsuario(Usuario usuario){
+    public void adicionaMembro(Usuario usuario){
         membros.add(usuario);
     }
 
